@@ -8,8 +8,8 @@ import {
 import { ApiProperty } from '@nestjs/swagger';
 import { IsObject, IsString } from 'class-validator';
 
-@Entity({ name: 'user_profile' })
-export class UserProfileEntity {
+@Entity({ name: 'domain' })
+export class DomainEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -18,7 +18,14 @@ export class UserProfileEntity {
   @Column({
     type: 'varchar',
   })
-  domainName: string;
+  tokenId: string;
+
+  @ApiProperty()
+  @IsString()
+  @Column({
+    type: 'varchar',
+  })
+  name: string;
 
   @ApiProperty()
   @IsObject()

@@ -19,9 +19,7 @@ export class AppController {
   @Get('/config')
   getConfig() {
     return {
-      web3: {
-        rpcUrl: this.configService.get('web3.rpcUrl'),
-      },
+      rpcUrl: this.configService.get('rpcUrl'),
     };
   }
 }

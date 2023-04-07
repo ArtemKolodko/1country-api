@@ -10,6 +10,9 @@ import entities from './typeorm';
 import { Web3Service } from './web3/web3.service';
 import { Web3Controller } from './web3/web3.controller';
 import { HttpModule } from '@nestjs/axios';
+import { DomainModule } from './domain/domain.module';
+import { DomainController } from './domain/domain.controller';
+import { DomainService } from './domain/domain.service';
 
 @Module({
   imports: [
@@ -34,8 +37,9 @@ import { HttpModule } from '@nestjs/axios';
     Web3Module,
     HttpModule,
     ScheduleModule.forRoot(),
+    DomainModule,
   ],
-  controllers: [AppController, Web3Controller],
-  providers: [AppService, Web3Service],
+  controllers: [AppController, Web3Controller, DomainController],
+  providers: [AppService, Web3Service, DomainService],
 })
 export class AppModule {}

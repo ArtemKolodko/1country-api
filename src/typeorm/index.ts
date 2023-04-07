@@ -1,6 +1,6 @@
-import { UserProfileEntity } from './user.profile.entity';
+import { DomainEntity } from './domain.entity';
 
-const entities = [UserProfileEntity];
+const entities = [DomainEntity];
 
-export { UserProfileEntity };
+export { DomainEntity };
 export default entities;
