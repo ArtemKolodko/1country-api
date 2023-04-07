@@ -9,4 +9,7 @@ export default () => ({
   explorerApiUrl:
     process.env.EXPLORER_API_URL || 'http://api1.explorer.t.hmny.io:3000',
   explorerApiKey: process.env.EXPLORER_API_KEY || '',
+  nameWrapperAddress:
+    process.env.NAME_WRAPPER_ADDRESS ||
+    '0x4cd2563118e57b19179d8dc033f2b0c5b5d69ff5',
 });
