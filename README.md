@@ -14,11 +14,11 @@ npm start
 1) Check `fly.toml` configuration. Login to fly.io `flyctl auth login`.
 2) Build docker image (M1)
 ```shell
-docker build --platform linux/amd64 -t <username>/stripe-payments-backend:latest .
+docker build --platform linux/amd64 -t <username>/1country-api:latest .
 ```
 3) Deploy the image
 ```shell
-flyctl deploy --local-only -i <username>/stripe-payments-backend:latest
+flyctl deploy --local-only -i <username>/1country-api:latest
 ```
 4) Set secrets
 ```shell
